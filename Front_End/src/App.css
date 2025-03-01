@@ -27,6 +27,7 @@ body,
 .appClass {
   display: flex;
   flex-direction: column;
+  
 }
 
 .main {
@@ -35,6 +36,7 @@ body,
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
 }
 
@@ -69,26 +71,30 @@ h1 {
   margin-bottom: 0;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-size: 2.6rem;
+  font-size: clamp(1.8rem, 3.5vw, 4.5rem);
 }
 
 .home-container {
   display: flex;
+      flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 95vw;
-  height: 125vh;
+  width: clamp(90vw, 95vw, 100vw);
+  height: clamp(100vh, 120vh, 125vh);
   margin: 0 auto;
   background: url('assets/images/background2.jpg') no-repeat center center;
   background-size: cover;
-  border-radius: 30px;
+  border-radius: clamp(15px, 3vw, 30px);
   border: 4px solid #dab3b3d8;
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .home-info-wrap,
 .login-home-container {
   display: flex;
+
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -110,12 +116,13 @@ h1 {
 }
 
 .home-pic {
-  width: 420px;
+  width: clamp(200px, 40vw, 420px);
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: clamp(10px, 2vw, 20px);
   box-shadow: 0 4px 8px rgba(31, 31, 31, 0.356);
   border: 4px solid #dab3b3d8;
-  margin-top: 20px;
+  margin-top: clamp(10px, 2vw, 20px);
 }
 
 .login-home-container {
@@ -183,6 +190,7 @@ h1 {
 
 .notfound-title {
   font-size: 5rem;
+  font-size: clamp(2.5rem, 4.5vw, 5.5rem);
   font-family: coolAndModern;
   color: #444;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.468);
@@ -193,6 +201,7 @@ h1 {
 
 .notfound-text {
   font-size: 1.7rem;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-family: ptext;
   color: #5d5d5d;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
@@ -210,6 +219,8 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.48);
   transition: all 0.3s ease;
   color: #6c685a;
+    font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  padding: clamp(8px, 1.5vw, 12px) clamp(25px, 4vw, 40px);
 }
 
 .notfound-button:hover {
@@ -242,7 +253,8 @@ h1 {
   list-style-type: none;
   gap: 3rem;
   font-size: 1.4rem;
-
+  gap: clamp(1rem, 3vw, 3rem);
+    font-size: clamp(1rem, 1.8vw, 1.4rem);
 
 }
 
@@ -274,7 +286,8 @@ h1 {
   border-radius: 20px;
   transition: all 0.3s ease;
   text-align: center;
-
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 3vw, 20px);
 
 }
 
@@ -333,7 +346,8 @@ h1 {
   list-style-type: none;
   font-size: 1.3rem;
   width: auto;
-
+  gap: clamp(1rem, 3vw, 3rem);
+    font-size: clamp(1.1rem, 1.7vw, 1.4rem);
   margin-bottom: 10px;
 }
 
@@ -417,11 +431,14 @@ button,
 
   border-radius: 20px;
   margin-right: 20px;
-
+  width: clamp(40px, 3.5vw, 65px);
+    border-radius: clamp(10px, 1.5vw, 20px);
+    margin-right: clamp(10px, 1.5vw, 20px);
 }
 
 .logIn-logo {
   width: 60px;
+    width: clamp(40px, 3.5vw, 60px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 50%;
 }
@@ -435,6 +452,7 @@ button,
 
 .logo {
   width: 110px;
+    width: clamp(80px, 6vw, 110px);
   height: auto;
   border-radius: 20px;
 
@@ -468,12 +486,12 @@ button,
 
 .product-image,
 .product-image-plant {
-  width: 300px;
+  width: clamp(180px, 30vw, 300px);
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  border-radius: clamp(10px, 2vw, 20px);
   box-shadow: 0 4px 8px rgba(31, 31, 31, 0.356);
   border: 4px solid #dab3b3d8;
-
 }
 
 .product-image-plant {
@@ -494,6 +512,7 @@ button,
 .product-title {
   font-family: coolAndModern;
   font-size: 2rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.3rem);
   color: #444444;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.468);
   margin: 0 auto;
@@ -503,6 +522,7 @@ button,
 .product-description {
   font-family: ptext;
   font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
   color: #5d5d5d;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.326);
   width: 100%;
@@ -511,6 +531,7 @@ button,
 
 .product-price {
   font-size: 1.8rem;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-weight: 600;
   font-family: coolAndModern;
   color: #5d5d5d;
@@ -526,7 +547,8 @@ button,
 
   padding: 10px 80px;
   font-size: 1.2rem;
-
+  font-size: clamp(1rem, 1.8vw, 1.3rem);
+    padding: clamp(8px, 1.5vw, 10px) clamp(40px, 5vw, 80px);
   font-family: ptext;
 
 
@@ -609,10 +631,13 @@ button,
   flex-direction: column;
 
 }
-
+.info-part-post h2{
+  width: 50%;
+}
 
 .post-title {
   font-size: 2.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
   border-bottom: 4px solid #d6bbbbd8;
   font-family: coolAndModern;
   color: #444;
@@ -627,6 +652,9 @@ button,
   margin: 20px auto;
   border-radius: 20px;
   box-shadow: 0 2px 8px rgba(248, 252, 255, 0.679);
+    width: clamp(60%, 70%, 90%);
+      border-radius: clamp(10px, 2vw, 20px);
+      margin: clamp(10px, 2vw, 20px) auto;
 }
 
 .post-image {
@@ -636,12 +664,16 @@ button,
   margin: 30px 40px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: clamp(50%, 70%, 100%);
+      max-width: clamp(250px, 40vw, 400px);
+      margin: clamp(20px, 3vw, 30px) clamp(20px, 4vw, 40px);
+      border-radius: clamp(10px, 2vw, 20px);
 }
 
 .post-price {
   text-align: center;
   font-size: 1.8rem;
-
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-weight: bold;
   color: #5d5d5d;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.326);
@@ -664,6 +696,8 @@ button,
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-bottom: 20px;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+      padding: clamp(8px, 1.5vw, 10px) clamp(20px, 4vw, 30px);
 }
 
 .buy-button:hover {
@@ -688,6 +722,7 @@ button,
 .post-detailed-description,
 .post-flower-instruction {
   font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
   width: 80%;
   max-width: 80%;
   background: linear-gradient(217deg, rgba(255, 248, 248, 0), rgba(255, 248, 248, 0.8) 70.71%),
@@ -700,11 +735,12 @@ button,
 
 .about {
   font-size: 1.4rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   border: 4px solid #dab3b3d8;
   line-height: 1.8;
   color: #444;
-
+    flex: 0 0 100%;
   margin: 0 auto;
   padding: 0 10px;
   white-space: pre-wrap;
@@ -724,21 +760,13 @@ button,
 
   width: 100%;
 
+  max-width: 100%;
+  max-height:600px ;
   box-shadow: 0 10px 25px rgba(214, 187, 187, 0.1);
   border-radius: 20px;
 
 }
 
-.banner-image {
-  border-radius: 30px;
-  width: 97%;
-  max-width: 100%;
-  max-height: 200px;
-  height: auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-
-}
 
 .container {
   display: flex;
@@ -747,7 +775,7 @@ button,
   align-items: center;
   margin: 0 auto;
   width: 100%;
-
+    flex-wrap: wrap;
 }
 
 
@@ -762,6 +790,7 @@ h2 {
   border-bottom: 4px solid #d6bbbbd8;
   font-family: hing2;
   font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
   letter-spacing: 0.06em;
 }
 
@@ -806,6 +835,7 @@ h2 {
 .p-contact-upper {
   font-family: ptext;
   font-size: 1.6rem;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
   color: #5d5d5d;
   text-align: center;
 
@@ -817,6 +847,7 @@ h2 {
 .p-contact ,.p-delete {
   font-family: ptext;
   font-size: 1.7rem;
+    font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   color: #444;
   margin-bottom: 5px;
 
@@ -833,6 +864,9 @@ h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      padding: clamp(8px, 1.2vw, 10px);
+      height: clamp(2rem, 3vw, 2.5rem);
 }
 
 .textarea-contact {
@@ -882,6 +916,7 @@ h2 {
 
 .social-logo {
   width: 43px;
+    width: clamp(30px, 3vw, 43px);
   height: auto;
   border-radius: 50%;
   transition: opacity 0.3s ease;
@@ -922,6 +957,8 @@ h2 {
   box-shadow: 0 4px 8px rgba(122, 122, 122, 0.297);
   transition: all 0.3s ease;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      padding: clamp(8px, 1.5vw, 10px) clamp(35px, 4vw, 55px);
 }
 
 .add-item-button:hover {
@@ -1002,6 +1039,8 @@ button:disabled {
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   background-color: #f9f6f2;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      padding: clamp(8px, 1.2vw, 12px);
 }
 
 .add-item-form textarea {
@@ -1009,11 +1048,6 @@ button:disabled {
   resize: vertical;
 }
 
-.image-preview {
-  width: 300px;
-  height: auto;
-  border-radius: 20px;
-}
 
 /* just for me */
 .choose-item-type {
@@ -1041,7 +1075,9 @@ button:disabled {
   cursor: pointer;
   text-align: center;
   letter-spacing: 1px;
-
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2vw, 15px);
+    gap: clamp(6px, 1.5vw, 10px);
 }
 
 .choose-item-type input[type="radio"] {
@@ -1105,11 +1141,13 @@ button:disabled {
   font-size: 2rem;
   width: 60%;
   border-bottom: 2px solid #bbb399;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .section-title,
 .about-title {
   font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 600;
   width: 50%;
   display: flex;
@@ -1120,6 +1158,7 @@ button:disabled {
 
 .about-title {
   font-size: 2.3rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.3rem);
 }
 
 .admin-buttons {
@@ -1147,6 +1186,8 @@ button:disabled {
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.48);
   margin-top: 20px;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+      padding: clamp(4px, 1vw, 5px) clamp(40px, 5vw, 70px);
 }
 
 .edit-button:hover,
@@ -1163,6 +1204,7 @@ button:disabled {
 .login-button-home {
   font-weight: lighter;
   font-size: 1.4rem;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
   background-color: #f0d5d5d8;
   border: 4px solid #dab3b3d8;
 }
@@ -1179,6 +1221,7 @@ button:disabled {
 .error-message {
   font-family: ptext;
   font-size: 1.7rem;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
   color: #444;
   margin-bottom: 5px;
 }
@@ -1199,6 +1242,8 @@ button:disabled {
   border-radius: 10px;
   border: 1px solid #bbb399;
   font-size: 1rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      padding: clamp(8px, 1.2vw, 12px);
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   background-color: #f9f6f2;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1219,6 +1264,8 @@ button:disabled {
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin-top: 10px;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+      padding: clamp(8px, 1.5vw, 10px) clamp(20px, 4vw, 30px);
 }
 
 .edit-item-form button:hover,
@@ -1239,6 +1286,9 @@ button:disabled {
   height: auto;
   border-radius: 20px;
   margin-top: 10px;
+    width: clamp(180px, 30vw, 300px);
+      height: auto;
+      border-radius: clamp(10px, 2vw, 20px);
 }
 
 
@@ -1246,6 +1296,7 @@ button:disabled {
 .login-description {
   font-family: ptext;
   font-size: 1.7rem;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
   color: #5d5d5d;
   margin-bottom: 20px;
 }
@@ -1253,6 +1304,7 @@ button:disabled {
 .login-label {
   font-family: coolAndModern;
   font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   margin-top: 30px;
   color: #5d5d5d;
 }
@@ -1271,7 +1323,8 @@ button:disabled {
   padding: 10px;
   width: auto;
   min-width: 300px;
-
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    padding: clamp(8px, 1.2vw, 10px);
 }
 
 .login-input:focus {
@@ -1286,6 +1339,7 @@ button:disabled {
   font-family: ptext;
   color: #555;
   font-size: 1.2rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
 .login-link {
@@ -1404,6 +1458,8 @@ button:disabled {
   box-shadow: 0 10px 25px rgba(214, 187, 187, 0.1);
   border-radius: 50px;
   border: 2px solid #dab3b3d8;
+    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      padding: clamp(8px, 1.5vw, 10px) clamp(25px, 4vw, 40px);
 }
 
 .account-container {
@@ -1467,6 +1523,10 @@ margin-top: 15px;
   border: 4px solid #dab3b3d8;
   margin-top: 20px;
   margin-bottom: 10px;
+    width: clamp(180px, 30vw, 300px);
+      border-radius: clamp(10px, 2vw, 20px);
+      margin-top: clamp(10px, 2vw, 20px);
+      margin-bottom: clamp(5px, 1vw, 10px);
 }
 
 .pic-buttons-container {
@@ -1507,9 +1567,7 @@ margin-top: 15px;
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   background-color: #f9f6f2;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+      padding: clamp(8px, 1.2vw, 12px);
 }
-
-
-
-
 

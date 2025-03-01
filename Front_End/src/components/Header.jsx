@@ -60,11 +60,11 @@ function Header() {
 
           )}
 
-        <NavLink to={isLoggedIn ? '/account' : '/login'}>
-          <img src={logInIcon} alt="User Icon" className="logIn-logo" />
-        </NavLink>
-        <img src={logo} alt="store's logo" className="logo-small" />
-                </div>
+          <NavLink to={isLoggedIn ? '/account' : '/login'}>
+            <img src={logInIcon} alt="User Icon" className="logIn-logo" />
+          </NavLink>
+          <img src={logo} alt="store's logo" className="logo-small" />
+        </div>
       </div>
     </header>
   );

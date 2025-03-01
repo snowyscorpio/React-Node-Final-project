@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Title from './Title';
 import About from './About';
-import Loading from './Loading'; // ודא שהרכיב קיים
+import Loading from './Loading'; 
 import Preview from '../assets/images/home-pic.jpg';
 
 function Home() {
@@ -44,7 +44,9 @@ function Home() {
         <div className="home-info-wrap">
           <img src={Preview} alt="home-pic" className="home-pic" />
           <div className="login-home-container">
+            <div className="container">
             <About />
+            </div>
             {isLoggedIn ? (
               <div className="login-button-container">
                 <p className="p-contact-upper">Thank You For Logging In And Joining Us</p>
